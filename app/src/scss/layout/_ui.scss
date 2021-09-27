@@ -4,6 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  font-family: 'Xolonium';
   &:focus,&:active{
     outline: none;
   }
@@ -17,4 +18,8 @@ input{
 }
 a{
   text-decoration: none;
+}
+body{
+  background: #1D1D1D;
+  color: #fff;
 }
