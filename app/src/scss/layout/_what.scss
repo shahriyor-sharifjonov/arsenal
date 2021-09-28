@@ -19,7 +19,6 @@
   &__title{
     font-weight: bold;
     font-size: 35px;
-    line-height: 68px;
     text-transform: uppercase;
     color: #FFFFFF;
     display: flex;
@@ -30,7 +29,7 @@
       margin-right: 13px;
     }
     @include media(768){
-      font-size: 30px;
+      font-size: 26px;
       line-height: 42px;
     }
     @include media($sm){
