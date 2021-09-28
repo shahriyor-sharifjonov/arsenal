@@ -1,0 +1,51 @@
+.quote{
+  padding: 75px 0;
+  &__body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  &__img{
+    margin-right: 50px;
+    @include media($md){
+      display: none;
+    }
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media($md){
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    @include media($md){
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    color: #FFFFFF;
+    @include media($md){
+      text-align: center;
+      margin-bottom: 22px;
+    }
+  }
+  &__subtitle{
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    @include media($md){
+      text-align: center;
+    }
+  }
+}
