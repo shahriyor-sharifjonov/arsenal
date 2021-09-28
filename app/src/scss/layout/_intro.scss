@@ -6,12 +6,32 @@
     justify-content: flex-start;
     padding-top: 40px;
     padding-bottom: 40px;
+    @include media(1200){
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
   &__content{
-    width: 60%;
+    width: calc(60% - 40px);
+    margin-right: 40px;
+    @include media(1200){
+      width: 100%;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__image{
     width: 40%;
+    @include media(1200){
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 70px;
+    }
   }
   &__img{
     max-width: 100%;
@@ -26,6 +46,13 @@
     span{
       color: #FFE70E;
     }
+    @include media(1200){
+      text-align: center;
+    }
+    @include media($md){
+      font-size: 26px;
+      line-height: 120%;
+    }
   }
   &__p{
     font-family: Inter;
@@ -34,23 +61,50 @@
     font-size: 20px;
     line-height: 31px;
     color: #FFFFFF;
+    @include media(1200){
+      text-align: center;
+    }
+    @include media($md){
+      font-size: 16px;
+      line-height: 120%;
+    }
     &.dots{
       position: relative;
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      @include media($md){
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        &:not(:last-child){
+          
+        }
+      }
       &::before{
         content: '';
         width: 4px;
         height: 4px;
         background: #FFE70E;
         margin-right: 8px;
+        @include media($md){
+          margin-top: 8px;
+        }
+        @include media(444){
+          display: none;
+        }
       }
     }
   }
   &__list{
     margin-top: 35px;
     list-style-type: none;
+    @include media(1200){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__btn{
     margin-top: 75px;
