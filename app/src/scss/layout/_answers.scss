@@ -1,0 +1,61 @@
+.set {
+
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
+
+    .content {
+        display: none;
+        background: #2c3122;
+        padding: 15px;
+        border-radius: 0 0 5px 5px;
+        border-top: 1px solid #1D1D1D; 
+    }
+    button{
+        background: #2C3122;
+        border-radius: 5px;
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #F4F4F4;        
+        &.active{
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}
+
+.answers {
+    padding: 75px 0;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+        @include media(992){
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+    &__content{
+        width: 100%;
+    }
+    &__img{
+        max-width: 40%;
+        width: 100%;
+        @include media(992){
+            max-width: 100%;
+            order: 1;
+            margin-top: 50px;
+        }
+    }
+}

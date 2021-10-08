@@ -1,0 +1,101 @@
+.cost{
+    margin: 75px 0;
+    background: url('../images/video-bg.png') center / cover no-repeat;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include media(992){
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+    .what__title{
+        margin-bottom: 10px;
+    }
+    &__content{
+        @include media(992){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__p{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;       
+        padding-left: 55px; 
+        margin-bottom: 50px;
+        @include media(992){
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #FFE70E;
+        margin-bottom: 50px;
+        img{
+            width: 38px;
+            height: 38px;
+            margin-right: 14px;
+        }
+    }
+    &__desc{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        padding-left: 55px;
+        @include media(992){
+            padding-left: 0;
+        }
+        margin-bottom: 10px;
+    }
+    &__price{
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 30px;
+        color: #FFFFFF;        
+        padding-left: 55px;
+        @include media(992){
+            padding-left: 0;
+        }
+    }
+    &__btn{
+        background: #FFE70E;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.38);
+        border-radius: 5px;
+        width: 273px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        color: #000000;        
+        margin-left: 55px;
+        margin-top: 60px;
+        @include media(992){
+            margin-left: 0;
+        }
+    }
+    &__img{
+        margin-left: 50px;
+        max-width: 55%;
+        width: 100%;
+        @include media(992){
+            max-width: 100%;
+            margin-top: 50px;
+            margin-left: 0;
+        }
+    }
+}

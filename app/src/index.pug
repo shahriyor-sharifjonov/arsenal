@@ -6,6 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
     link(href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css")
     link(rel="stylesheet", href="styles/index.css")
   body 
     include components/header.pug 
@@ -19,6 +20,8 @@ html(lang="en")
     include components/advantages.pug 
     include components/programm.pug 
     include components/answers.pug 
+    include components/cost.pug 
+    include components/or.pug 
     +header
     +intro
     +what
@@ -29,5 +32,7 @@ html(lang="en")
     +advantages
     +programm
     +answers
+    +cost
+    +or
     script(src="scripts/jquery.js") 
     script(src="scripts/index.js") 
