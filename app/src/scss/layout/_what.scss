@@ -12,6 +12,10 @@
   }
   &__content{
     width: calc(60% - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     @include media(1200){
       width: 100%;
     }
@@ -27,6 +31,7 @@
     margin-bottom: 60px;
     img{
       margin-right: 13px;
+
     }
     @include media(768){
       font-size: 26px;
@@ -39,6 +44,7 @@
       text-align: center;
       img{
         margin-bottom: 20px;
+        margin-right: 0;
       }
     }
   }

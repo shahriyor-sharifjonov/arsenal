@@ -1,5 +1,8 @@
 .intro{
-  background: url('../images/intro-bg.png') center / cover no-repeat;
+  background: url('../images/intro.png') center / cover no-repeat;
+  @include media(1200){
+    background: url('../images/intro.png') left / cover no-repeat;
+  }
   &__body{
     display: flex;
     align-items: center;
@@ -13,8 +16,7 @@
     }
   }
   &__content{
-    width: calc(60% - 40px);
-    margin-right: 40px;
+    width: 100%;
     @include media(1200){
       width: 100%;
       margin-right: 0;
@@ -38,11 +40,12 @@
   }
   &__title{
     font-weight: bold;
+    text-align: center;
     font-size: 44px;
     line-height: 64px;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 35px;
+    margin-bottom: 180px;
     span{
       color: #FFE70E;
     }
@@ -58,9 +61,10 @@
     font-family: Inter;
     font-style: normal;
     font-weight: 200;
-    font-size: 20px;
-    line-height: 31px;
+    font-size: 16px;
+    line-height: 120%;
     color: #FFFFFF;
+    max-width: 400px;
     @include media(1200){
       text-align: center;
     }

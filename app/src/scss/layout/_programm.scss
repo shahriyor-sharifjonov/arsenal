@@ -1,0 +1,57 @@
+.programm {
+    padding: 75px 0;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        @include media(992){
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+    &__item{
+        background: url('../images/programm-bg.png') center / cover no-repeat;
+        border: 1px solid #FFE70E;
+        box-sizing: border-box;
+        padding: 20px;
+        width: calc(50% - 10px);
+        @include media(992){
+            width: 100%;
+            &:first-of-type{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+        img{
+            width: 50px;
+            height: 50px;
+            margin-left: 8px;
+        }
+    }
+    &__list{
+        list-style-type: none;
+    }
+    &__li{
+        font-size: 20px;
+        line-height: 29px;
+        color: #FFFFFF;
+        font-family: 'Inter';
+        font-weight: 200;
+        @include media(768){
+            font-size: 16px;
+            line-height: 120%;
+        }
+        span{
+            color: #FFE70E;
+        }
+    }
+}
