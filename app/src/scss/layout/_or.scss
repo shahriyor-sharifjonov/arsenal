@@ -1,5 +1,8 @@
 .or{
     margin:  75px 0 0 0;
+    @include media(992){
+        margin-bottom: 75px;
+    }
     &__body{
         position: relative;
     }
@@ -83,7 +86,7 @@
     }
     &__btn{
         max-width: 300px;
-        width: 100%;
+        width: 280px;
         height: 50px;
         display: flex;
         align-items: center;
@@ -100,7 +103,7 @@
         color: #000000;
         position: absolute;
         bottom: 40px;
-        right: 0;
+        right: 15px;
         @include media(992){
             position: static;
             margin-left: auto;
