@@ -1,5 +1,7 @@
 mixin footer()
-    .footer 
+    a(href="#top").footer__top ВВерх 
+        i.fas.fa-arrow-up 
+    .footer
         .footer__nav.container 
             .footer__row    
                 .footer__col 
@@ -7,15 +9,15 @@ mixin footer()
                     p.footer__link онлайн-практикум
                     p.footer__link АРСЕНАЛ
                 .footer__col 
-                    a(href="#!").footer__link О курсе
-                    a(href="#!").footer__link Для кого?
+                    a(href="#about").footer__link О курсе
+                    a(href="#why").footer__link Для кого?
                 .footer__col 
-                    a(href="#!").footer__link Программа
-                    a(href="#!").footer__link Стоимость
+                    a(href="#programm").footer__link Программа
+                    a(href="#price").footer__link Стоимость
                 .footer__col 
-                    a(href="#!").footer__i.fab.fa-instagram 
+                    a(href="https://Instagram.com/wow.chuk" target="_blank").footer__i.fab.fa-instagram 
                 .footer__col 
-                    a(href="#!").footer__btn я в деле! 
+                    a(href="#price2").footer__btn я в деле! 
         .footer__bottom 
             .container
                 p.footer__p

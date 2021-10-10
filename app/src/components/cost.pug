@@ -1,5 +1,5 @@
 mixin cost()
-    .cost 
+    .cost#price 
         .cost__body.container 
             .cost__content 
                 h2.what__title 
@@ -11,5 +11,5 @@ mixin cost()
                     | Все сразу
                 p.cost__desc Стоимость участия
                 p.cost__price 50 000  ₸
-                a(href="#!").cost__btn Оплатить
+                a(href="#!" onclick="openPopup()").cost__btn Оплатить
             img(src="images/cost.png", alt="").cost__img 

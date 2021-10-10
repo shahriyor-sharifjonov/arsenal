@@ -1,0 +1,15 @@
+mixin popup()
+    .popup 
+        .popup__body 
+            button(type="button" onclick="closePopup()").fas.fa-times.popup__close
+            p.popup__title Оставить заявку
+            p.popup__subtitle Заполните заявку и мы с вами свяжемся
+            form(action="send.php", method="post").popup__form
+                input(type="text" placeholder="Имя" required name="name").popup__input
+                input(type="text" placeholder="Номер телефона" required name="phone").popup__input
+                .popup__row     
+                    .popup__chk
+                        input(type="checkbox", name="" id="chk" required checked).popup__chk-input
+                        .popup__chk-overlay 
+                    label(for="chk").popup__label Согласен на обработку персональных данных
+                button(type="submit").popup__btn ОСТАВИТЬ ЗАЯВКУ

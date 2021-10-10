@@ -53,9 +53,10 @@
         max-width: 40%;
         width: 100%;
         @include media(992){
-            max-width: 100%;
-            order: 1;
-            margin-top: 50px;
+            display: none;
+            // max-width: 100%;
+            // order: 1;
+            // margin-top: 50px;
         }
     }
 }

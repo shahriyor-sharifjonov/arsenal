@@ -1,6 +1,6 @@
 // Header Menu
-const headerButton: HTMLButtonElement =
-  document.querySelector(".header__button");
+const headerButton: HTMLButtonElement = document.querySelector(".header__button");
+const body = document.querySelector("body");
 const headerMenu: HTMLUListElement = document.querySelector(".header__menu");
 let menuOpened = false;
 const menuToggle = () => {
@@ -11,14 +11,28 @@ const menuToggle = () => {
 
 headerButton.onclick = menuToggle;
 
-window.onclick = (e: MouseEvent) => {
-  if (
-    menuOpened &&
-    !e.composedPath().includes(headerButton) &&
-    !e.composedPath().includes(headerMenu)
-  )
+window.onclick = (e: any) => {
+  if (menuOpened && !e.composedPath().includes(headerButton) && !e.composedPath().includes(headerMenu)){ 
     menuToggle();
+  }
+  if(e.target.classList.contains('header__link')){
+    menuToggle()
+  }
+  if(e.target.classList.contains('popup')){
+    e.target.classList.remove('active')
+    body.classList.remove('ov-hidden')
+  }
 };
+
+function closePopup(){
+  document.querySelector('.popup').classList.remove('active')
+  body.classList.remove('ov-hidden')
+}
+
+function openPopup(){
+  document.querySelector('.popup').classList.add('active')
+  body.classList.add('ov-hidden')
+}
 
 
 $(document).ready(function() {

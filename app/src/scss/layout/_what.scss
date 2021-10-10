@@ -1,5 +1,8 @@
 .what{
   padding: 75px 0;
+  @include media(1200){
+    padding: 75px 0 0 0;
+  }
   &__body{
     display: flex;
     justify-content: space-between;
@@ -35,13 +38,14 @@
     }
     @include media(768){
       font-size: 26px;
-      line-height: 42px;
+      line-height: 120%;
     }
     @include media($sm){
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       text-align: center;
+      margin-bottom: 47px;
       img{
         margin-bottom: 20px;
         margin-right: 0;
@@ -68,15 +72,35 @@
     }
   }
   &__image{
+    max-width: 500px;
     width: calc(40%);
+    overflow: hidden;
     @include media(1200){
       width: 100%;
-      margin-top: 50px;
+      margin-top: 20px;
+      order: 1;
     }
   }
   &__img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @include media(1200){
+      transform: rotate(6deg);
+      margin-bottom: -90px;
+    }
+    @include media(992){
+      transform: rotate(6deg);
+      margin-bottom: -68px;
+    }
+    @include media($md){
+      margin-bottom: -52px;
+    }
+    @include media($sm){
+      margin-bottom: -52px;
+    }
+    @include media(400){
+      margin-bottom: -38px;
+    }
   }
 }

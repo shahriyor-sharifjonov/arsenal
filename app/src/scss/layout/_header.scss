@@ -3,6 +3,10 @@
   align-items: center;
   justify-content: center;
   padding: 30px 0;
+  background: url('../images/programm-bg.png') center / cover no-repeat;
+  @include media(768){
+    height: 80px; 
+  }
   &__nav{
     display: flex;
     align-items: center;

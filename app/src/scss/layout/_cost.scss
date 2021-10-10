@@ -1,6 +1,9 @@
 .cost{
     margin: 75px 0;
     background: url('../images/video-bg.png') center / cover no-repeat;
+    @include media(576){
+        background: none;
+    }
     &__body{
         display: flex;
         justify-content: space-between;
@@ -41,6 +44,9 @@
         justify-content: flex-start;
         color: #FFE70E;
         margin-bottom: 50px;
+        @include media(768){
+            margin-bottom: 24px;
+        }
         img{
             width: 38px;
             height: 38px;
@@ -86,6 +92,9 @@
         margin-top: 60px;
         @include media(992){
             margin-left: 0;
+        }
+        @include media(768){
+            margin-top: 23px;
         }
     }
     &__img{

@@ -6,6 +6,31 @@
         @include media(992){
             margin-bottom: 30px;
         }
+        @include media(768){
+            margin-bottom: 0;
+          }
+    }
+    &__top{
+        display: none;
+        @include media(768){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FFF6A3;
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.38);
+            width: 100%;
+            height: 53px;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: #000000;     
+            i{
+                margin-left: 9px;
+            }       
+        }
     }
     &__row{
         display: flex;
@@ -30,8 +55,14 @@
         @include media(576){
             width: 100%;
             align-items: center;
+            margin-right: 0;
             &:nth-of-type(2){
                 margin-bottom: 10px;
+            }
+        }
+        &:last-of-type{
+            @include media(768){
+                display: none;
             }
         }
     }
@@ -73,6 +104,9 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            @include media(768){
+              justify-content: center;
+            }
             i{
                 margin-right: 5px;
             }

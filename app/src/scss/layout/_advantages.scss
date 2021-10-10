@@ -53,6 +53,7 @@
         justify-content: flex-start;
         width: calc(50% - 20px);
         margin-bottom: 50px;
+        position: relative;
         @include media(1200){
             width: 100%;
             text-align: center;
@@ -72,6 +73,23 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }   
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 19px;
+            height: 61px;
+            background: url('../images/bullet.svg') 100% 100%  / cover no-repeat;
+            display: none;
+        }
+        @include media(768){
+            text-align: left;
+            padding-left: 40px;
+            &::after{
+                display: block;
+            }
         }
     }
 }

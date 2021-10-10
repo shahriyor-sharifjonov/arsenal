@@ -22,37 +22,193 @@ a{
 body{
   background: #1D1D1D;
   color: #fff;
+  &.ov-hidden{
+    overflow: hidden;
+  }
 }
 .space{
   width: 100%;
   height: 100px;
-  background: url('../images/intro-bg.png') center / cover no-repeat;
+  background: url('../images/footer-bg.png') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
   &-wrap{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    // justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
-    animation: slide 200s infinite linear;
+    // animation: slide 800s infinite linear;
+    @include media(992){
+      // animation: slide 600s infinite linear;
+    }
+    @include media(576){
+      // animation: slide 400s infinite linear;
+    }
     &:not(:last-child){
-      margin-right: 30px;
+      margin-right: 50px;
     }
     img{
       &:not(:last-child){
-        margin-right: 30px;
+        margin-right: 50px;
+        @include media(768){
+          margin-right: 25px;
+        }
       }
     }
   }
 }
 
-@keyframes slide {
-  0%{
-    left: -100%;
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 120;
+  background: #00000060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms ease-in-out;
+  padding: 0 15px;
+  &.active{
+    opacity: 1;
+    visibility: visible;
   }
-  100%{
-    left: 100%;
+  &__body{
+    background: url('../images/intro-bg.png') center / cover no-repeat;
+    background-color: #000;
+    border-radius: 47px;
+    max-width: 476px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 50px 30px 30px 30px;
+    z-index: 120;
+    position: relative;
+    @include media(576){
+      padding: 50px 15px 15px 15px;
+      border-radius:15px;
+    }
+  }
+  &__close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+  }
+  &__form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  &__title{
+    font-size: 22px;
+    line-height: 29px;
+    margin-bottom: 5px;
+    color: #FFFFFF;    
+  }
+  &__subtitle{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+  }
+  &__input{
+    background: #2C3122;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    height: 50px;
+    padding-left: 20px;
+    color: #fff;
+  }
+  &__row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  &__label{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-left: 5px;
+    user-select: none;
+  }
+  &__chk{
+    position: relative;
+    min-width: 20px;
+    height: 20px;
+    &-overlay{
+      background: #2C3122;
+      border: 1px solid #FFE70E;
+      box-sizing: border-box;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      &::before{
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 14px;
+          height: 14px;
+          background: #FFE70E;
+          border-radius: 3px;
+          transform: scale(0);
+          transition: 200ms cubic-bezier(0.68,-0.55,0.265,1.55);
+      }
+    }
+    &-input{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      &:checked~.popup__chk-overlay{
+        &::before{
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &__btn{
+    background: #FFE70E;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.38);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: none;
   }
 }
+
+// @keyframes slide {
+//   0%{
+//     left: -2000%;
+//   }
+//   100%{
+//     left: 0;
+//   }
+// }

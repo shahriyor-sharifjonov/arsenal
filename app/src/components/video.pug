@@ -1,12 +1,16 @@
 mixin video()
-  .video 
-    .video__body.container 
-      .video__content
-        img(src="images/video-img.png", alt="video").video__img
-      .video__text
-        p.video__p Набор инструментов маркетинга, которые дают возможность быть уверенным в завтрашнем дне и подбирать нужную стратегию для любого бизнеса в любой нише и в любое время 
-        h2.video__title ЭТО И ЕСТЬ АРСЕНАЛ
-        p.video__p Но даже пулемет дает осечки – заканчиваются патроны, перегревается. <br>А теперь представьте, что у Вас не один пулемет и револьвер,  целый склад боеприпасов на год вперед.
-  .container
-    .video-container
-      <iframe src="https://www.youtube.com/embed/K4TOrB7at0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    .video 
+        .video__body.container 
+            .video__text
+                p.video__p Набор инструментов маркетинга, которые дают возможность быть уверенным в завтрашнем дне и подбирать нужную стратегию для любого бизнеса в любой нише и в любое время 
+                h2.video__title ЭТО И ЕСТЬ АРСЕНАЛ
+                p.video__p Но даже пулемет дает осечки – заканчиваются патроны, перегревается. <br>А теперь представьте, что у Вас не один пулемет и револьвер,  целый склад боеприпасов на год вперед.
+            .video__content
+                img(src="images/video-img.png" alt="video").video__img
+    .video__title2.container
+        h2.what__title 
+            img(src="images/aim.svg" alt="")
+            | ДАВАЙ ПОЗНАКОМИМСЯ
+    .container
+        .video-container
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/sBGfFwdnyKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
